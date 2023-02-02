@@ -105,7 +105,7 @@ fn main() -> wry::Result<()> {
 
     #[cfg(target_os = "windows")]
     let window = {
-        let mut icon_path = format!("png/{}_32.ico", package_name);
+        let mut icon_path = format!("png/{package_name}_32.ico");
         // If there is no setting, use the default one.
         if !std::path::Path::new(&icon_path).exists() {
             icon_path = "png/icon_32.ico".to_string();
